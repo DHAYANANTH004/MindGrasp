@@ -59,14 +59,7 @@ body {
 
 }
 
-.Categories p {
-    background-color: #9e3cdd;
-    color: white;
-    padding: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    outline: none;
-}
+
 
 .Categories button{
     text-decoration: none;
@@ -78,38 +71,51 @@ body {
     outline: none;
     border:none;
     cursor: pointer;
+    border: solid #9e3cdd 1px;
+    
 }
 
 .Categories button:hover {
-    background-color: black;
-    color:#9e3cdd;
+    background-color:transparent;
+    color:black;
+    transition: 1s;
+    border: solid #9e3cdd 1px;
 }
 
 .sale image {
     position: relative ;
-    display:inline block;
 }
 
 .sale-image img {
     width: 100%;
-    object-fit: cover;
-    display: flex;
-
+    object-fit: cover; 
 }
 
 .sale-msg {
     background-color: white;
     color: black;
     width: 300px;
-    height: 100px;
-    position: absolute;
-    top: 50% ;
-    transform: translate(70%, -80%);
-    padding: 10px 70px;
-    font-size: 20px;
-    text-align: center;
     border-radius: 20px;
-    padding-top: 20px;
+    padding: 2%;
+    position: absolute;
+    top:30%;
+    left:20%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
 }
 
 .sale-msg:hover {
